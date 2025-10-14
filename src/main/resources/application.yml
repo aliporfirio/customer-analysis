@@ -1,0 +1,62 @@
+spring:
+  application.name: customeranalysis
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customeranalysisdb
+    username: postgres
+    password: alixpostgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate.ddl-auto: validate
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  kafka:
+    bootstrap-servers: kafka:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    properties:
+      spring.json.add.type.headers: false
+    consumer:
+      group-id: customer-service-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    customer-topic: alerts.customer_expired
+
+  mail:
+    host: localhost
+    port: 1025
+    #username: noreply@aruba.it
+    #password: yourpassword
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true	
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+logging:
+  file:
+    name: /app/logs/customeranalysis.log
+
+notification:
+  expiredmail:
+    max-retries: 5
+  upsellmail:
+    to: alice.porfirio@gmail.com #fakemail.marketing@aruba.it
+    subject: "Upselling opportunity for customer %s"
+    body: "To Marketing Team,\n Customer %s has service %s active for more than 3 years.\n
+		       It has to be considered the possibility of an upselling. \n
+		       Regards,\n
+		       Customer Analysis System"
+    max-retries: 3

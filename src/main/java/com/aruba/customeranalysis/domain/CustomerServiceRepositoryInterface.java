@@ -1,0 +1,26 @@
+package com.aruba.customeranalysis.domain;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import com.aruba.customeranalysis.domain.dto.CustomerAverageCostDTO;
+import com.aruba.customeranalysis.domain.dto.CustomerExpiredServiceDTO;
+import com.aruba.customeranalysis.domain.dto.CustomerExpiringServiceDTO;
+import com.aruba.customeranalysis.domain.dto.ServiceSummaryDTO;
+import com.aruba.customeranalysis.domain.model.CustomerService;
+
+public interface CustomerServiceRepositoryInterface {
+	
+	CustomerService save(CustomerService customer);
+
+	List<ServiceSummaryDTO> findActiveServicesByType();
+
+	List<CustomerAverageCostDTO> findAverageCostPerCustomer();
+
+	List<CustomerExpiredServiceDTO> findCustomersWithExpiredServices();
+
+	List<CustomerExpiringServiceDTO> findCustomersithExpiringServices(LocalDate limitDate);
+
+	List<CustomerService> findActiveServicesOlderThan(LocalDate limitDate);
+
+}
