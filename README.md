@@ -54,50 +54,6 @@ The main functionalities of the system include:
 
 The project is implemented using Java 21 and Spring Boot 3.4.10, following a layered and modular architecture:
 
-```mermaid
-graph TD
-    subgraph User Interaction
-        A[Web UI / REST Client] -->|Upload CSV / Request Reports| B[REST Controllers]
-    end
-
-    subgraph Application Layer
-        B --> C[CustomerServiceCsvService]
-        B --> D[CustomerServiceReportService]
-        D --> E[NotificationDispatcher]
-        E --> F[NotificationWorker]
-    end
-
-    subgraph Domain Layer
-        C --> G[CustomerService / DTOs]
-        D --> G
-        F --> H[Notification]
-        H --> I[CustomerEvent]
-        E --> R[NotificationJob]
-        
-    end
-
-    subgraph Infrastructure Layer
-        G --> J[JPA Repositories / PostgreSQL]
-        H --> J
-        H --> K[Kafka Event Publisher]
-        H --> L[Email Sender Adapter]
-        C --> S[CustomerRepositoryAdapter]
-        D --> S
-    end
-
-    subgraph Config Layer
-        B --> M[SecurityConfig / JWT / Filters]
-        H --> N[KafkaProducerConfig]
-        B --> O[OpenAPI Config]
-    end
-
-    style User Interaction fill:#f9f,stroke:#333,stroke-width:1px
-    style Application Layer fill:#bbf,stroke:#333,stroke-width:1px
-    style Domain Layer fill:#bfb,stroke:#333,stroke-width:1px
-    style Infrastructure Layer fill:#ffb,stroke:#333,stroke-width:1px
-    style Config Layer fill:#fbb,stroke:#333,stroke-width:1px
-```
-
 #### Application Layer
 
 Handles business logic, service orchestration, and notification dispatching (CustomerServiceCsvService, CustomerServiceReportService, NotificationDispatcher).
