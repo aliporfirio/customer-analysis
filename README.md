@@ -8,6 +8,7 @@ The application exposes REST APIs secured with JWT authentication and provides a
 ## Table of Contents
 
 - Functional Overview
+- Architectural Overview
 - Getting Started
 - Running the Application
 - Swagger UI & Authentication
@@ -49,19 +50,19 @@ The main functionalities of the system include:
 
 ---
 
-##Architectural Overview
+## Architectural Overview
 
 The project is implemented using Java 21 and Spring Boot 3.4.10, following a layered and modular architecture:
 
-####Application Layer
+#### Application Layer
 
 Handles business logic, service orchestration, and notification dispatching (CustomerServiceCsvService, CustomerServiceReportService, NotificationDispatcher).
 
-####Domain Layer
+#### Domain Layer
 
 Contains core models, DTOs, repositories interfaces, events, and job definitions (CustomerService, Notification, CustomerEvent, NotificationJob).
 
-####Infrastructure Layer
+#### Infrastructure Layer
 
 Implements integration with external systems:
 
@@ -74,15 +75,15 @@ Implements integration with external systems:
 
 - REST API: Controllers expose endpoints, with exception handling and JWT-based security.
 
-####Configuration Layer
+#### Configuration Layer
 
 Configurations for Kafka, OpenAPI documentation, and Spring Security (JWT authentication, filters, roles, and user management).
 
-####Testing
+#### Testing
 
 Unit and integration tests leverage JUnit, Spring Boot Test, Testcontainers (PostgreSQL, Kafka), and Spring Security test support.
 
-###Technology Stack
+### Technology Stack
 
 - Backend: Java 21, Spring Boot 3.4.0, Spring Data JPA
 - Messaging: Apache Kafka 7.5.0
@@ -94,7 +95,7 @@ Unit and integration tests leverage JUnit, Spring Boot Test, Testcontainers (Pos
 - Testing: JUnit, Testcontainers, Spring Boot Test
 - Test API: Postman 
 
-###Deployment
+### Deployment
 
 The application is containerized and can be deployed with Docker Compose, including services for PostgreSQL, Kafka (with Zookeeper), Mailhog (for email testing), and the customer-analysis service itself.
 
