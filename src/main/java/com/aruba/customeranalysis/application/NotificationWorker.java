@@ -50,6 +50,7 @@ public class NotificationWorker {
         notification.setType(job.type());
         notification.setStatus(NotificationStatus.PENDING);
         notification.setCreatedDatetime(OffsetDateTime.now());
+        notification.setRetryCount(1);
         notificationRepository.save(notification);
 
         boolean sent = false;

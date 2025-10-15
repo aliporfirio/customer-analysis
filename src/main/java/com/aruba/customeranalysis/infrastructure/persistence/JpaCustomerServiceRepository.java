@@ -2,6 +2,7 @@ package com.aruba.customeranalysis.infrastructure.persistence;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,9 +13,13 @@ import com.aruba.customeranalysis.domain.dto.CustomerAverageCostDTO;
 import com.aruba.customeranalysis.domain.dto.CustomerExpiredServiceDTO;
 import com.aruba.customeranalysis.domain.dto.CustomerExpiringServiceDTO;
 import com.aruba.customeranalysis.domain.dto.ServiceSummaryDTO;
+import com.aruba.customeranalysis.domain.model.ServiceType;
 import com.aruba.customeranalysis.infrastructure.persistence.model.CustomerServiceEntity;
 
 public interface JpaCustomerServiceRepository extends JpaRepository<CustomerServiceEntity, UUID> {
+	
+	Optional<CustomerServiceEntity> findByCustomerIdAndServiceTypeAndActivationDate(String customerId, 
+			ServiceType serviceType, LocalDate activationDate);
 	
 	@Query("""
 	        SELECT new com.aruba.customeranalysis.domain.dto.ServiceSummaryDTO(

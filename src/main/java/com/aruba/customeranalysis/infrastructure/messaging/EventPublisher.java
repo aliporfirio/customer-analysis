@@ -13,8 +13,8 @@ public class EventPublisher {
 
     private static final Logger logger = LoggerFactory.getLogger(EventPublisher.class);
 
-    @Value("${spring.kafka.customer-topic}")
-    private String topic;
+    @Value("${spring.kafka.expired-topic}")
+    private String expiredTopic;
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
@@ -25,7 +25,7 @@ public class EventPublisher {
     public void publish(CustomerEvent event) {
     	
         logger.info("Publishing event: {} for customer {}", event.getNotificationType(), event.getCustomerId());
-        kafkaTemplate.send(topic, event.getCustomerId(), event);
+        kafkaTemplate.send(expiredTopic, event.getCustomerId(), event);
         
     }
 }

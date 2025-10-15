@@ -18,7 +18,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -66,15 +65,17 @@ public class CustomerServiceApplicationService {
 	
 	        for (CSVRecord record : records) {
 	        	
+	        	CustomerService service = null;
+	        	
 	            try {
 	            	
-	            	CustomerService service = createFromCsvRecord(record);
-	                customerServiceRepositoryInterface.save(service);
+	            	service = createFromCsvRecord(record);
+	                customerServiceRepositoryInterface.saveOrUpdate(service);
 	                
 	            } catch (IllegalArgumentException e) {
-	                log.error("Invalid row: " + record.toString() + " - Errore: " + e.getMessage());
-	            } catch (DataIntegrityViolationException e) {
-	            	log.error("Duplicated row in database: " + record.toString());
+	                log.error("Invalid row: " + record.toString() + " - " + e.getMessage());
+	            } catch (Exception e) {
+	            	log.error("Error saving row: " + record.toString() + " - " + e.getMessage());
 	            }
 	        }
 	    }
@@ -152,7 +153,7 @@ public class CustomerServiceApplicationService {
 	
     private void populateActiveServices(Sheet sheet, List<ServiceSummaryDTO> data) {
     	
-        int rowId = 4;
+        int rowId = 3;
         
         for (ServiceSummaryDTO item : data) {
         	
@@ -165,7 +166,7 @@ public class CustomerServiceApplicationService {
 
     private void populateAvgCost(Sheet sheet, List<CustomerAverageCostDTO> data) {
     	
-        int rowId = 4;
+        int rowId = 3;
         
         for (CustomerAverageCostDTO item : data) {
         	
@@ -178,7 +179,7 @@ public class CustomerServiceApplicationService {
 
     private void populateExpiredServices(Sheet sheet, List<CustomerExpiredServiceDTO> data) {
         
-    	int rowId = 4;
+    	int rowId = 3;
         
     	for (CustomerExpiredServiceDTO item : data) {
     		
@@ -209,7 +210,7 @@ public class CustomerServiceApplicationService {
 
     private void populateExpiringServices(Sheet sheet, List<CustomerExpiringServiceDTO> data) {
     	
-        int rowId = 4;
+        int rowId = 3;
         
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
         

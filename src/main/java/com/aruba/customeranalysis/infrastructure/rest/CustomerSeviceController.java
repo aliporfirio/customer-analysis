@@ -7,7 +7,9 @@ import java.time.format.DateTimeFormatter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,13 +32,14 @@ public class CustomerSeviceController {
         this.customerServiceApplicationService = customerServiceApplicationService;
     }
 	
-	@PostMapping("/upload")
+	@PreAuthorize("hasAnyRole('ADMIN','OPERATOR')")
+	@PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> uploadCsv(@RequestParam("file") MultipartFile file) throws IOException {
 		
 		log.info("Upload CSV: " + file.getOriginalFilename());
 		
         if (file.isEmpty()) {
-            return ResponseEntity.badRequest().body("Il file CSV è vuoto o mancante.");
+            return ResponseEntity.badRequest().body("Missing or empty CSV file");
         }
 
         customerServiceApplicationService.processCsv(file);
@@ -45,7 +48,8 @@ public class CustomerSeviceController {
     }
 	
 	@GetMapping(value = "/summary", produces = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-    public ResponseEntity<byte[]> getSummaryReport() throws IOException {
+	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<byte[]> getSummaryReport() throws IOException {
     	
     	log.info("Generate summary report");
     	

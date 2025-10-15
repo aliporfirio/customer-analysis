@@ -11,7 +11,7 @@ CREATE TABLE customer_services (
 );
 
 ALTER TABLE customer_services
-ADD CONSTRAINT uq_customer_service UNIQUE (customer_id, service_type, activation_date, expiration_date);
+ADD CONSTRAINT uq_customer_service UNIQUE (customer_id, service_type, activation_date);
 
 CREATE INDEX idx_customer_services_customer_id ON customer_services(customer_id);
 CREATE INDEX idx_customer_services_status ON customer_services(status);

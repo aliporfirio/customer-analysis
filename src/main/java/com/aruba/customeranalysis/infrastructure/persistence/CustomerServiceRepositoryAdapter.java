@@ -2,6 +2,7 @@ package com.aruba.customeranalysis.infrastructure.persistence;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +12,7 @@ import com.aruba.customeranalysis.domain.dto.CustomerExpiredServiceDTO;
 import com.aruba.customeranalysis.domain.dto.CustomerExpiringServiceDTO;
 import com.aruba.customeranalysis.domain.dto.ServiceSummaryDTO;
 import com.aruba.customeranalysis.domain.model.CustomerService;
+import com.aruba.customeranalysis.domain.model.ServiceType;
 import com.aruba.customeranalysis.infrastructure.persistence.model.CustomerServiceEntity;
 
 @Repository
@@ -25,6 +27,44 @@ public class CustomerServiceRepositoryAdapter implements CustomerServiceReposito
 	@Override
 	public CustomerService save(CustomerService service) {
 		return toCustomerService(jpaCustomerServiceRepository.save(toCustomerServiceEntity(service)));
+	}
+	
+	@Override
+	public CustomerService saveOrUpdate(CustomerService service) {
+		
+		CustomerService existingService = findServicesByCustomerIdAndServiceTypeAndActivationDate(
+				service.getCustomerId(), 
+				service.getServiceType(), 
+				service.getActivationDate());
+		
+		if (existingService != null) {
+			
+			existingService.setAmount(service.getAmount());
+			existingService.setExpirationDate(service.getExpirationDate());
+			existingService.setStatus(service.getStatus());
+			
+			return toCustomerService(jpaCustomerServiceRepository.save(toCustomerServiceEntity(existingService)));
+			
+		} else {		
+			return toCustomerService(jpaCustomerServiceRepository.save(toCustomerServiceEntity(service)));
+		}
+	}
+	
+	@Override
+	public CustomerService findServicesByCustomerIdAndServiceTypeAndActivationDate(
+			String customerId, 
+			ServiceType serviceType, 
+			LocalDate activationDate) {
+		
+		Optional<CustomerServiceEntity> service = jpaCustomerServiceRepository.findByCustomerIdAndServiceTypeAndActivationDate(
+				customerId, serviceType, activationDate);
+	    
+		if (service.isPresent()) {
+			return toCustomerService(service.get());
+		} else {
+			return null;
+		}
+		
 	}
 	
 	@Override
@@ -50,9 +90,9 @@ public class CustomerServiceRepositoryAdapter implements CustomerServiceReposito
     @Override
     public List<CustomerService> findActiveServicesOlderThan(LocalDate limitDate) {
     	
-        List<CustomerServiceEntity> entities = jpaCustomerServiceRepository.findActiveServicesOlderThan(limitDate);
+        List<CustomerServiceEntity> services = jpaCustomerServiceRepository.findActiveServicesOlderThan(limitDate);
        
-        return entities.stream()
+        return services.stream()
                        .map(this::toCustomerService)
                        .toList();
         

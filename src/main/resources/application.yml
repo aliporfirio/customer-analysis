@@ -11,7 +11,7 @@ spring:
     properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
@@ -23,7 +23,7 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: "*"
-    customer-topic: alerts.customer_expired
+    expired-topic: alerts.customer_expired
 
   mail:
     host: localhost
@@ -33,9 +33,9 @@ spring:
     properties:
       mail:
         smtp:
-          auth: true
+          auth: false
           starttls:
-            enable: true	
+            enable: false	
 
 management:
   endpoints:

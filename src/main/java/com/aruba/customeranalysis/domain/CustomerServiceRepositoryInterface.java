@@ -8,10 +8,13 @@ import com.aruba.customeranalysis.domain.dto.CustomerExpiredServiceDTO;
 import com.aruba.customeranalysis.domain.dto.CustomerExpiringServiceDTO;
 import com.aruba.customeranalysis.domain.dto.ServiceSummaryDTO;
 import com.aruba.customeranalysis.domain.model.CustomerService;
+import com.aruba.customeranalysis.domain.model.ServiceType;
 
 public interface CustomerServiceRepositoryInterface {
 	
 	CustomerService save(CustomerService customer);
+	
+	CustomerService saveOrUpdate(CustomerService service);
 
 	List<ServiceSummaryDTO> findActiveServicesByType();
 
@@ -22,5 +25,8 @@ public interface CustomerServiceRepositoryInterface {
 	List<CustomerExpiringServiceDTO> findCustomersithExpiringServices(LocalDate limitDate);
 
 	List<CustomerService> findActiveServicesOlderThan(LocalDate limitDate);
+
+	CustomerService findServicesByCustomerIdAndServiceTypeAndActivationDate(String customerId,
+			ServiceType serviceType, LocalDate activationDate);
 
 }
