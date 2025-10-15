@@ -63,15 +63,17 @@ graph TD
     subgraph Application Layer
         B --> C[CustomerServiceCsvService]
         B --> D[CustomerServiceReportService]
-        B --> E[NotificationDispatcher]
+        D --> E[NotificationDispatcher]
         E --> F[NotificationWorker]
     end
 
     subgraph Domain Layer
-        C --> G[CustomerService Entity / DTOs]
+        C --> G[CustomerService / DTOs]
         D --> G
-        E --> H[Notification Entity / DTOs]
-        G --> I[CustomerEvent / NotificationJob]
+        E --> H[Notification]
+        H --> I[CustomerEvent]
+        E --> M[NotificationJob]
+        
     end
 
     subgraph Infrastructure Layer
@@ -79,11 +81,13 @@ graph TD
         H --> J
         H --> K[Kafka Event Publisher]
         H --> L[Email Sender Adapter]
+        C --> N[CustomerRepositoryAdapter]
+        D --> N
     end
 
     subgraph Config Layer
         B --> M[SecurityConfig / JWT / Filters]
-        B --> N[KafkaProducerConfig]
+        H --> N[KafkaProducerConfig]
         B --> O[OpenAPI Config]
     end
 
