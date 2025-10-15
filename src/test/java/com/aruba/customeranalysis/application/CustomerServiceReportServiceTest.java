@@ -1,12 +1,18 @@
 package com.aruba.customeranalysis.application;
 
-import static org.mockito.Mockito.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.argThat;
+import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -17,16 +23,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.Spy;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.aruba.customeranalysis.domain.CustomerServiceRepositoryInterface;
 import com.aruba.customeranalysis.domain.Constants;
+import com.aruba.customeranalysis.domain.CustomerServiceRepositoryInterface;
 import com.aruba.customeranalysis.domain.dto.CustomerAverageCostDTO;
 import com.aruba.customeranalysis.domain.dto.CustomerExpiredServiceDTO;
 import com.aruba.customeranalysis.domain.dto.CustomerExpiringServiceDTO;
 import com.aruba.customeranalysis.domain.dto.ServiceSummaryDTO;
-import com.aruba.customeranalysis.domain.job.NotificationJob;
 import com.aruba.customeranalysis.domain.model.CustomerService;
 import com.aruba.customeranalysis.domain.model.NotificationType;
 import com.aruba.customeranalysis.domain.model.ServiceType;
@@ -78,7 +83,7 @@ class CustomerServiceReportServiceTest {
         when(repository.findCustomersWithExpiredServices()).thenReturn(
                 List.of(new CustomerExpiredServiceDTO("CUST002", 3L))
         );
-        when(repository.findCustomersithExpiringServices(any())).thenReturn(
+        when(repository.findCustomersWithExpiringServices(any())).thenReturn(
                 List.of(new CustomerExpiringServiceDTO("CUST003", ServiceType.PEC, LocalDate.now().plusDays(10)))
         );
         when(repository.findActiveServicesOlderThan(any())).thenReturn(List.of());
@@ -92,7 +97,7 @@ class CustomerServiceReportServiceTest {
         verify(repository).findActiveServicesByType();
         verify(repository).findAverageCostPerCustomer();
         verify(repository).findCustomersWithExpiredServices();
-        verify(repository).findCustomersithExpiringServices(any());
+        verify(repository).findCustomersWithExpiringServices(any());
         verify(repository).findActiveServicesOlderThan(any());
     }
 
@@ -103,7 +108,7 @@ class CustomerServiceReportServiceTest {
         when(repository.findActiveServicesByType()).thenReturn(List.of());
         when(repository.findAverageCostPerCustomer()).thenReturn(List.of());
         when(repository.findCustomersWithExpiredServices()).thenReturn(List.of(expired));
-        when(repository.findCustomersithExpiringServices(any())).thenReturn(List.of());
+        when(repository.findCustomersWithExpiringServices(any())).thenReturn(List.of());
         when(repository.findActiveServicesOlderThan(any())).thenReturn(List.of());
 
         reportService.generateExcelReport();
@@ -123,7 +128,7 @@ class CustomerServiceReportServiceTest {
         when(repository.findActiveServicesByType()).thenReturn(List.of());
         when(repository.findAverageCostPerCustomer()).thenReturn(List.of());
         when(repository.findCustomersWithExpiredServices()).thenReturn(List.of());
-        when(repository.findCustomersithExpiringServices(any())).thenReturn(List.of());
+        when(repository.findCustomersWithExpiringServices(any())).thenReturn(List.of());
         when(repository.findActiveServicesOlderThan(any())).thenReturn(List.of(old));
 
         reportService.generateExcelReport();

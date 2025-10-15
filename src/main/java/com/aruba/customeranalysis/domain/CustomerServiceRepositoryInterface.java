@@ -22,7 +22,7 @@ public interface CustomerServiceRepositoryInterface {
 
 	List<CustomerExpiredServiceDTO> findCustomersWithExpiredServices();
 
-	List<CustomerExpiringServiceDTO> findCustomersithExpiringServices(LocalDate limitDate);
+	List<CustomerExpiringServiceDTO> findCustomersWithExpiringServices(LocalDate limitDate);
 
 	List<CustomerService> findActiveServicesOlderThan(LocalDate limitDate);
 

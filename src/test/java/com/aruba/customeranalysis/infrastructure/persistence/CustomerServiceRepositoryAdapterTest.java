@@ -174,7 +174,7 @@ class CustomerServiceRepositoryAdapterTest {
         assertEquals(summaryList, adapter.findActiveServicesByType());
         assertEquals(avgList, adapter.findAverageCostPerCustomer());
         assertEquals(expiredList, adapter.findCustomersWithExpiredServices());
-        assertEquals(expiringList, adapter.findCustomersithExpiringServices(LocalDate.now()));
+        assertEquals(expiringList, adapter.findCustomersWithExpiringServices(LocalDate.now()));
         assertEquals(1, adapter.findActiveServicesOlderThan(LocalDate.now()).size());
 
         verify(jpaRepository).findActiveServicesByType();

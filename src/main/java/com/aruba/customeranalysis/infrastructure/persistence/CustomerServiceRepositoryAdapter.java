@@ -83,7 +83,7 @@ public class CustomerServiceRepositoryAdapter implements CustomerServiceReposito
     }
 
     @Override
-    public List<CustomerExpiringServiceDTO> findCustomersithExpiringServices(LocalDate limitDate) {
+    public List<CustomerExpiringServiceDTO> findCustomersWithExpiringServices(LocalDate limitDate) {
         return jpaCustomerServiceRepository.findCustomersExpiringSoon(limitDate);
     }
     

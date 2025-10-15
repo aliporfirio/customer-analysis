@@ -98,6 +98,11 @@ public class CustomerServiceCsvService {
         } catch (Exception e) {
             throw new IllegalArgumentException("Missing or invalid amount");
         }
+        
+        if ((service.getStatus().equals(ServiceStatus.EXPIRED) && service.getExpirationDate().isAfter(LocalDate.now()))
+        		|| (service.getStatus().equals(ServiceStatus.ACTIVE) && service.getExpirationDate().isBefore(LocalDate.now()))) {
+        	throw new IllegalArgumentException("Invalid combination of service status and expiration date");        	        	
+        }
 
         return service;
     }

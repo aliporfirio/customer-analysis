@@ -46,7 +46,7 @@ public class CustomerServiceReportService {
         List<ServiceSummaryDTO> activeServices = customerServiceRepositoryInterface.findActiveServicesByType();
 		List<CustomerAverageCostDTO> avgCosts = customerServiceRepositoryInterface.findAverageCostPerCustomer();
 		List<CustomerExpiredServiceDTO> expiredServices = customerServiceRepositoryInterface.findCustomersWithExpiredServices();
-		List<CustomerExpiringServiceDTO> expiringServices = customerServiceRepositoryInterface.findCustomersithExpiringServices(java.time.LocalDate.now().plusDays(15));
+		List<CustomerExpiringServiceDTO> expiringServices = customerServiceRepositoryInterface.findCustomersWithExpiringServices(java.time.LocalDate.now().plusDays(15));
 
 		InputStream template = getTemplateStream();
 		ByteArrayOutputStream out = new ByteArrayOutputStream();

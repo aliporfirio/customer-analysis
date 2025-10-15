@@ -3080,3 +3080,1287 @@ org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable repre
 2025-10-15 11:49:06 [task-4] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST004 and service FATTURAZIONE permanently failed after retries
 2025-10-15 11:49:06 [task-8] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST011 and service PEC permanently failed after retries
 2025-10-15 11:51:36 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Node -1 disconnected.
+2025-10-15 15:30:07 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 15:30:07 [main] INFO  c.a.c.CustomerAnalysisApplication - Starting CustomerAnalysisApplication using Java 21.0.8 with PID 4736 (C:\Users\alice\eclipse-workspace\customer-analysis\target\classes started by alice in C:\Users\alice\eclipse-workspace\customer-analysis)
+2025-10-15 15:30:07 [main] INFO  c.a.c.CustomerAnalysisApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:30:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 15:30:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
+2025-10-15 15:30:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-15 15:30:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-10-15 15:30:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-15 15:30:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-15 15:30:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-15 15:30:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4237 ms
+2025-10-15 15:30:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 15:30:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5256fbc
+2025-10-15 15:30:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 15:30:13 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/customeranalysisdb (PostgreSQL 17.5)
+2025-10-15 15:30:14 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.176s)
+2025-10-15 15:30:14 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-10-15 15:30:14 [main] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-10-15 15:30:14 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 15:30:14 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 15:30:14 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 15:30:15 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 15:30:15 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15 15:30:15 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 15:30:17 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 15:30:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:30:18 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15 15:30:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 15:30:20 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-15 15:30:20 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-15 15:30:21 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-10-15 15:30:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-10-15 15:30:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-10-15 15:30:22 [main] INFO  c.a.c.CustomerAnalysisApplication - Started CustomerAnalysisApplication in 15.947 seconds (process running for 16.791)
+2025-10-15 15:30:43 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-15 15:30:43 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-15 15:30:43 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2025-10-15 15:30:45 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 666 ms
+2025-10-15 15:31:03 [http-nio-8080-exec-10] INFO  c.a.c.i.rest.security.AuthController - Login for user: admin
+2025-10-15 15:31:51 [http-nio-8080-exec-6] INFO  c.a.c.i.r.CustomerSeviceController - Upload CSV: example_customers.csv
+2025-10-15 15:33:30 [http-nio-8080-exec-7] INFO  c.a.c.i.r.CustomerSeviceController - Upload CSV: example_customers.csv
+2025-10-15 15:33:30 [http-nio-8080-exec-7] ERROR c.a.c.a.CustomerServiceCsvService - Invalid row: CSVRecord [comment='null', recordNumber=1, values=[CUST001, HOSTING, 2022-10-01, 2025-10-01, 120.50, ACTIVE]] - Invalid combination of service status and expiration date
+2025-10-15 15:35:51 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 15:35:51 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - Starting CustomerControllerIntegrationTestFull using Java 21.0.8 with PID 18244 (started by alice in C:\Users\alice\eclipse-workspace\customer-analysis)
+2025-10-15 15:35:51 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:35:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 15:35:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 250 ms. Found 4 JPA repository interfaces.
+2025-10-15 15:35:56 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 15:35:56 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 15:35:56 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 15:35:56 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 15:35:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 15:35:57 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@136a4800
+2025-10-15 15:35:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 15:35:57 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15 15:35:57 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 15:35:59 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 15:36:00 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:36:00 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15 15:36:02 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 15:36:02 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-15 15:36:02 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-15 15:36:04 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-10-15 15:36:06 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:36:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:36:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-10-15 15:36:06 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - Started CustomerControllerIntegrationTestFull in 15.999 seconds (process running for 35.811)
+2025-10-15 15:36:07 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 10
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:62390]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-a0d1ca66-4fcf-4b47-bdb6-64cc8124b268-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = a0d1ca66-4fcf-4b47-bdb6-64cc8124b268
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 15:36:07 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 15:36:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 15:36:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 15:36:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760535368222
+2025-10-15 15:36:08 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-a0d1ca66-4fcf-4b47-bdb6-64cc8124b268-1, groupId=a0d1ca66-4fcf-4b47-bdb6-64cc8124b268] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 15:36:08 [main] INFO  c.a.c.i.r.CustomerSeviceController - Generate summary report
+2025-10-15 15:36:10 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-a0d1ca66-4fcf-4b47-bdb6-64cc8124b268-1, groupId=a0d1ca66-4fcf-4b47-bdb6-64cc8124b268] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 15:36:10 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-a0d1ca66-4fcf-4b47-bdb6-64cc8124b268-1, groupId=a0d1ca66-4fcf-4b47-bdb6-64cc8124b268] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-a0d1ca66-4fcf-4b47-bdb6-64cc8124b268-1 unregistered
+2025-10-15 15:36:10 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 10
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:62390]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-33dd87af-c4a3-481d-bcb1-ce3778197534-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 33dd87af-c4a3-481d-bcb1-ce3778197534
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 15:36:10 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760535370374
+2025-10-15 15:36:10 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-33dd87af-c4a3-481d-bcb1-ce3778197534-2, groupId=33dd87af-c4a3-481d-bcb1-ce3778197534] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 15:36:10 [main] INFO  c.a.c.i.r.CustomerSeviceController - Upload CSV: customers-service.csv
+2025-10-15 15:36:10 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-33dd87af-c4a3-481d-bcb1-ce3778197534-2, groupId=33dd87af-c4a3-481d-bcb1-ce3778197534] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 15:36:10 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-33dd87af-c4a3-481d-bcb1-ce3778197534-2, groupId=33dd87af-c4a3-481d-bcb1-ce3778197534] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 15:36:10 [main] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-33dd87af-c4a3-481d-bcb1-ce3778197534-2 unregistered
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@136a4800 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@68e51ff2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@57ce4b5d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7427661 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4ba96849 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@b73f441 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2e42d2d1 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3aa75806 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3a4c943b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:36:12 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2e89becf (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:14 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 15:43:15 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - Starting CustomerControllerIntegrationTestFull using Java 21.0.8 with PID 14940 (started by alice in C:\Users\alice\eclipse-workspace\customer-analysis)
+2025-10-15 15:43:15 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:43:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 15:43:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 170 ms. Found 4 JPA repository interfaces.
+2025-10-15 15:43:21 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 15:43:21 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 15:43:21 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 15:43:22 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 15:43:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 15:43:23 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57df93c1
+2025-10-15 15:43:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 15:43:23 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15 15:43:23 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 15:43:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 15:43:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:43:27 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15 15:43:29 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 15:43:29 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-15 15:43:29 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-15 15:43:30 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-10-15 15:43:32 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:43:32 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:43:32 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-10-15 15:43:32 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - Started CustomerControllerIntegrationTestFull in 18.343 seconds (process running for 37.35)
+2025-10-15 15:43:33 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 10
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:62469]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 15:43:33 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 15:43:33 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 15:43:33 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 15:43:33 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760535813934
+2025-10-15 15:43:33 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 15:43:34 [main] INFO  c.a.c.i.r.CustomerSeviceController - Upload CSV: customers-service.csv
+2025-10-15 15:43:34 [main] INFO  c.a.c.i.r.CustomerSeviceController - Generate summary report
+2025-10-15 15:43:35 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: EXPIRED_ALERT for customer CUST001
+2025-10-15 15:43:35 [task-1] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST001, expiredCount=6, serviceType=null]
+2025-10-15 15:43:35 [task-1] INFO  c.a.c.i.messaging.EventPublisher - Publishing event: EXPIRED_ALERT for customer CUST001
+2025-10-15 15:43:35 [task-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [PLAINTEXT://localhost:62469]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = customeranalysis-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-10-15 15:43:35 [task-1] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 15:43:36 [task-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=customeranalysis-producer-1] Instantiated an idempotent producer.
+2025-10-15 15:43:36 [task-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 15:43:36 [task-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 15:43:36 [task-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760535816093
+2025-10-15 15:43:36 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: UPSELL_EMAIL for customer CUST002
+2025-10-15 15:43:36 [task-2] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST002, expiredCount=null, serviceType=PEC]
+2025-10-15 15:43:36 [task-2] ERROR c.a.c.application.NotificationWorker - Attempt 1 failed in sending notification UPSELL_EMAIL: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 1025; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect
+2025-10-15 15:43:37 [main] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Error while fetching metadata with correlation id 2 : {alerts.customer_expired=UNKNOWN_TOPIC_OR_PARTITION}
+2025-10-15 15:43:37 [main] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Cluster ID: W0N-ySgkRreYgNiMyGWN0A
+2025-10-15 15:43:37 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Error while fetching metadata with correlation id 1 : {alerts.customer_expired=LEADER_NOT_AVAILABLE}
+2025-10-15 15:43:37 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=customeranalysis-producer-1] Cluster ID: W0N-ySgkRreYgNiMyGWN0A
+2025-10-15 15:43:37 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Error while fetching metadata with correlation id 5 : {alerts.customer_expired=UNKNOWN_TOPIC_OR_PARTITION}
+2025-10-15 15:43:37 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=customeranalysis-producer-1] ProducerId set to 0 with epoch 0
+2025-10-15 15:43:37 [main] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Error while fetching metadata with correlation id 5 : {alerts.customer_expired=LEADER_NOT_AVAILABLE}
+2025-10-15 15:43:37 [task-1] INFO  c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST001 successfully sent
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Discovered group coordinator localhost:62469 (id: 2147483646 rack: null)
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] (Re-)joining group
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Request joining group due to: need to re-join with the given member-id: consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1-68729469-cf3d-4c37-a31f-ae2d16f233aa
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] (Re-)joining group
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Successfully joined group with generation Generation{generationId=1, memberId='consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1-68729469-cf3d-4c37-a31f-ae2d16f233aa', protocol='range'}
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Finished assignment for group at generation 1: {consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1-68729469-cf3d-4c37-a31f-ae2d16f233aa=Assignment(partitions=[alerts.customer_expired-0])}
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Successfully synced group in generation Generation{generationId=1, memberId='consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1-68729469-cf3d-4c37-a31f-ae2d16f233aa', protocol='range'}
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Notifying assignor about the new Assignment(partitions=[alerts.customer_expired-0])
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Adding newly assigned partitions: alerts.customer_expired-0
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Resetting offset for partition alerts.customer_expired-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:62469 (id: 1 rack: null)], epoch=0}}.
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Revoke previously assigned partitions alerts.customer_expired-0
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Member consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1-68729469-cf3d-4c37-a31f-ae2d16f233aa sending LeaveGroup request to coordinator localhost:62469 (id: 2147483646 rack: null) due to the consumer is being closed
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 15:43:37 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1, groupId=d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 15:43:38 [task-2] ERROR c.a.c.application.NotificationWorker - Attempt 2 failed in sending notification UPSELL_EMAIL: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 1025; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-d9fa0f0d-d9c8-42ab-80eb-f0175bd4e540-1 unregistered
+2025-10-15 15:43:38 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 10
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:62469]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-8e8fc8ca-633b-4176-a22e-250c5f4ee057-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 8e8fc8ca-633b-4176-a22e-250c5f4ee057
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 15:43:38 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760535818557
+2025-10-15 15:43:38 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-8e8fc8ca-633b-4176-a22e-250c5f4ee057-2, groupId=8e8fc8ca-633b-4176-a22e-250c5f4ee057] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 15:43:38 [main] INFO  c.a.c.i.r.CustomerSeviceController - Upload CSV: customers-service.csv
+2025-10-15 15:43:38 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-8e8fc8ca-633b-4176-a22e-250c5f4ee057-2, groupId=8e8fc8ca-633b-4176-a22e-250c5f4ee057] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 15:43:38 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-8e8fc8ca-633b-4176-a22e-250c5f4ee057-2, groupId=8e8fc8ca-633b-4176-a22e-250c5f4ee057] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 15:43:38 [main] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-8e8fc8ca-633b-4176-a22e-250c5f4ee057-2 unregistered
+2025-10-15 15:43:39 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:39 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node -1 disconnected.
+2025-10-15 15:43:39 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:39 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 8 due to node 1 being disconnected (elapsed time since creation: 7ms, elapsed time since send: 7ms, throttle time: 0ms, request timeout: 30000ms)
+2025-10-15 15:43:40 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:40 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 9 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2025-10-15 15:43:40 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:40 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 10 due to node 1 being disconnected (elapsed time since creation: 14ms, elapsed time since send: 14ms, throttle time: 0ms, request timeout: 30000ms)
+2025-10-15 15:43:41 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:41 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@705b0ed3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@57df93c1 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2cd4f8ed (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4515632 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5322e782 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@416242fb (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4a7ad9aa (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4414e611 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4e07e6 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@53e8e88e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:43:42 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:42 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:43 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:43 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:44 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:44 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:45 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:45 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:46 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:46 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:47 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:47 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:48 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:48 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:49 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:49 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:50 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:50 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:51 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:51 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:52 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:52 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:53 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:53 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:54 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:54 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:55 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:55 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:56 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:56 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:57 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:57 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:58 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:58 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:43:59 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:43:59 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:00 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:00 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:01 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:01 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:02 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:02 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:03 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:03 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:04 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:04 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:05 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:05 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:06 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:06 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:07 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:07 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:08 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:08 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:09 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:09 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:10 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:44:10 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62469) could not be established. Node may not be available.
+2025-10-15 15:44:10 [SpringApplicationShutdownHook] INFO  o.s.c.s.DefaultLifecycleProcessor - Shutdown phase 1073741823 ends with 1 bean still running after timeout of 30000ms: [applicationTaskExecutor]
+2025-10-15 15:44:10 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=customeranalysis-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-10-15 15:44:10 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 15:44:10 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 15:44:10 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 15:44:10 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 15:44:10 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for customeranalysis-producer-1 unregistered
+2025-10-15 15:44:10 [task-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-10-15 15:44:10 [task-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Interrupted during connection acquisition
+2025-10-15 15:44:10 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:44:10 [task-2] ERROR o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void com.aruba.customeranalysis.application.NotificationWorker.process(com.aruba.customeranalysis.domain.job.NotificationJob)
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:467)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:639)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:374)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy178.save(Unknown Source)
+	at com.aruba.customeranalysis.infrastructure.persistence.NotificationRepositoryAdapter.save(NotificationRepositoryAdapter.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.aruba.customeranalysis.infrastructure.persistence.NotificationRepositoryAdapter$$SpringCGLIB$$0.save(<generated>)
+	at com.aruba.customeranalysis.application.NotificationWorker.process(NotificationWorker.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection [HikariPool-1 - Interrupted during connection acquisition] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:129)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:156)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:286)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:294)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:232)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:83)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:176)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:421)
+	... 33 common frames omitted
+Caused by: java.sql.SQLException: HikariPool-1 - Interrupted during connection acquisition
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:183)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:144)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:46)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:126)
+	... 40 common frames omitted
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:340)
+	at com.zaxxer.hikari.util.ConcurrentBag.borrow(ConcurrentBag.java:151)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	... 45 common frames omitted
+2025-10-15 15:44:40 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2025-10-15 15:44:40 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Connection is not available, request timed out after 30006ms (total=0, active=0, idle=0, waiting=0)
+2025-10-15 15:44:40 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Connection to localhost:62472 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2025-10-15 15:44:40 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [HikariPool-1 - Connection is not available, request timed out after 30006ms (total=0, active=0, idle=0, waiting=0)] [n/a]
+2025-10-15 15:44:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-15 15:44:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-15 15:46:52 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 15:46:52 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - Starting CustomerControllerIntegrationTestFull using Java 21.0.8 with PID 2220 (started by alice in C:\Users\alice\eclipse-workspace\customer-analysis)
+2025-10-15 15:46:52 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:46:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 15:46:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 142 ms. Found 4 JPA repository interfaces.
+2025-10-15 15:46:56 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 15:46:56 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 15:46:57 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 15:46:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 15:46:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 15:46:58 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a15bbf3
+2025-10-15 15:46:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 15:46:58 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15 15:46:58 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 15:47:00 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 15:47:00 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:47:01 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15 15:47:03 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 15:47:03 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-15 15:47:03 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-15 15:47:05 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-10-15 15:47:06 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:47:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:47:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-10-15 15:47:06 [main] INFO  c.a.c.i.CustomerControllerIntegrationTestFull - Started CustomerControllerIntegrationTestFull in 15.571 seconds (process running for 34.475)
+2025-10-15 15:47:08 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 10
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:62589]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = e5779289-2c44-43d7-80a6-3c138ff21c92
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 15:47:08 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 15:47:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 15:47:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 15:47:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760536028587
+2025-10-15 15:47:08 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 15:47:09 [main] INFO  c.a.c.i.r.CustomerSeviceController - Upload CSV: customers-service.csv
+2025-10-15 15:47:09 [main] INFO  c.a.c.i.r.CustomerSeviceController - Generate summary report
+2025-10-15 15:47:10 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: EXPIRED_ALERT for customer CUST001
+2025-10-15 15:47:10 [task-1] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST001, expiredCount=6, serviceType=null]
+2025-10-15 15:47:10 [task-1] INFO  c.a.c.i.messaging.EventPublisher - Publishing event: EXPIRED_ALERT for customer CUST001
+2025-10-15 15:47:10 [task-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [PLAINTEXT://localhost:62589]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = customeranalysis-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-10-15 15:47:10 [task-1] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 15:47:10 [task-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=customeranalysis-producer-1] Instantiated an idempotent producer.
+2025-10-15 15:47:10 [task-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 15:47:10 [task-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 15:47:10 [task-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760536030553
+2025-10-15 15:47:10 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: UPSELL_EMAIL for customer CUST002
+2025-10-15 15:47:10 [task-2] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST002, expiredCount=null, serviceType=PEC]
+2025-10-15 15:47:10 [task-2] ERROR c.a.c.application.NotificationWorker - Attempt 1 failed in sending notification UPSELL_EMAIL: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 1025; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect
+2025-10-15 15:47:11 [main] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Error while fetching metadata with correlation id 2 : {alerts.customer_expired=UNKNOWN_TOPIC_OR_PARTITION}
+2025-10-15 15:47:11 [main] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Cluster ID: 1UOWzVpYR_OF-3RXRXiOKg
+2025-10-15 15:47:11 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Error while fetching metadata with correlation id 1 : {alerts.customer_expired=LEADER_NOT_AVAILABLE}
+2025-10-15 15:47:11 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=customeranalysis-producer-1] Cluster ID: 1UOWzVpYR_OF-3RXRXiOKg
+2025-10-15 15:47:11 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Error while fetching metadata with correlation id 5 : {alerts.customer_expired=UNKNOWN_TOPIC_OR_PARTITION}
+2025-10-15 15:47:11 [main] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Error while fetching metadata with correlation id 5 : {alerts.customer_expired=LEADER_NOT_AVAILABLE}
+2025-10-15 15:47:11 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=customeranalysis-producer-1] ProducerId set to 0 with epoch 0
+2025-10-15 15:47:11 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Error while fetching metadata with correlation id 6 : {alerts.customer_expired=LEADER_NOT_AVAILABLE}
+2025-10-15 15:47:11 [main] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Error while fetching metadata with correlation id 7 : {alerts.customer_expired=LEADER_NOT_AVAILABLE}
+2025-10-15 15:47:11 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Discovered group coordinator localhost:62589 (id: 2147483646 rack: null)
+2025-10-15 15:47:11 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] (Re-)joining group
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Request joining group due to: need to re-join with the given member-id: consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1-f0f7ca9e-d1b5-47f1-b63f-708faa8f0ceb
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] (Re-)joining group
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Successfully joined group with generation Generation{generationId=1, memberId='consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1-f0f7ca9e-d1b5-47f1-b63f-708faa8f0ceb', protocol='range'}
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Finished assignment for group at generation 1: {consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1-f0f7ca9e-d1b5-47f1-b63f-708faa8f0ceb=Assignment(partitions=[alerts.customer_expired-0])}
+2025-10-15 15:47:12 [task-1] INFO  c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST001 successfully sent
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Successfully synced group in generation Generation{generationId=1, memberId='consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1-f0f7ca9e-d1b5-47f1-b63f-708faa8f0ceb', protocol='range'}
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Notifying assignor about the new Assignment(partitions=[alerts.customer_expired-0])
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Adding newly assigned partitions: alerts.customer_expired-0
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Resetting offset for partition alerts.customer_expired-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:62589 (id: 1 rack: null)], epoch=0}}.
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Revoke previously assigned partitions alerts.customer_expired-0
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Member consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1-f0f7ca9e-d1b5-47f1-b63f-708faa8f0ceb sending LeaveGroup request to coordinator localhost:62589 (id: 2147483646 rack: null) due to the consumer is being closed
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 15:47:12 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1, groupId=e5779289-2c44-43d7-80a6-3c138ff21c92] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 15:47:12 [task-2] ERROR c.a.c.application.NotificationWorker - Attempt 2 failed in sending notification UPSELL_EMAIL: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 1025; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-e5779289-2c44-43d7-80a6-3c138ff21c92-1 unregistered
+2025-10-15 15:47:13 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 10
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:62589]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-9d2969d6-dbb0-4046-8372-5224db1b3e8b-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 9d2969d6-dbb0-4046-8372-5224db1b3e8b
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 15:47:13 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760536033402
+2025-10-15 15:47:13 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-9d2969d6-dbb0-4046-8372-5224db1b3e8b-2, groupId=9d2969d6-dbb0-4046-8372-5224db1b3e8b] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 15:47:13 [main] INFO  c.a.c.i.r.CustomerSeviceController - Upload CSV: customers-service.csv
+2025-10-15 15:47:13 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-9d2969d6-dbb0-4046-8372-5224db1b3e8b-2, groupId=9d2969d6-dbb0-4046-8372-5224db1b3e8b] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 15:47:13 [main] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-9d2969d6-dbb0-4046-8372-5224db1b3e8b-2, groupId=9d2969d6-dbb0-4046-8372-5224db1b3e8b] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 15:47:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-9d2969d6-dbb0-4046-8372-5224db1b3e8b-2 unregistered
+2025-10-15 15:47:14 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:14 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node -1 disconnected.
+2025-10-15 15:47:15 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:15 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 9 due to node 1 being disconnected (elapsed time since creation: 9ms, elapsed time since send: 9ms, throttle time: 0ms, request timeout: 30000ms)
+2025-10-15 15:47:15 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:15 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 10 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2025-10-15 15:47:15 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:15 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62589) could not be established. Node may not be available.
+2025-10-15 15:47:16 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:16 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62589) could not be established. Node may not be available.
+2025-10-15 15:47:16 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2a15bbf3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:16 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@837ff5c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6e8b3c29 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5b613c8c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@68f1b8f5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5f0b77a8 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@68567214 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3a81b6ce (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5fd2877b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [task-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5be01d1e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-15 15:47:17 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:17 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62589) could not be established. Node may not be available.
+2025-10-15 15:47:18 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:18 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62589) could not be established. Node may not be available.
+2025-10-15 15:47:19 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:19 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62589) could not be established. Node may not be available.
+2025-10-15 15:47:20 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:20 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62589) could not be established. Node may not be available.
+2025-10-15 15:47:21 [kafka-producer-network-thread | customeranalysis-producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Node 1 disconnected.
+2025-10-15 15:47:21 [kafka-producer-network-thread | customeranalysis-producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=customeranalysis-producer-1] Connection to node 1 (localhost/127.0.0.1:62589) could not be established. Node may not be available.

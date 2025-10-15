@@ -14,9 +14,8 @@ The application exposes REST APIs secured with JWT authentication and provides a
 - Swagger UI & Authentication
 - API Endpoints
     - Authentication
-    - Customer Management
+    - Customer Analysis
 - Preconfigured Data
-- Notes
 
 ---
 
@@ -29,13 +28,10 @@ The main functionalities of the system include:
   - Each CSV row represents a customer service with fields: customer_id, service_type, activation_date, expiration_date, amount, and status.
   - The system validates each field, logs non-compliant rows, and continues processing the remaining data.
 
-- Reporting and Analytics
-
-  - Aggregated reports are exposed via RESTful JSON APIs (e.g., /report/summary).
-  - Reports include:
+- Reporting and Analytics include:
 
    - Total active services per service type.
-   - Average spending per customer.
+   - Average cost per customer.
    - Customers with multiple expired services.
    - Customers with services expiring within the next 15 days.
 
@@ -230,7 +226,7 @@ Authorization:
 
   - 200 OK: Report generated successfully
   - Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-  - Content-Disposition: attachment; filename=customer_report_<timestamp>.xlsx
+  - Content-Disposition: attachment; filename=customer_service_report_template_<datetime>.xlsx
   - Body: Excel file in .xlsx format
 
 #### Notes: 
