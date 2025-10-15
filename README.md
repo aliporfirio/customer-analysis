@@ -72,7 +72,7 @@ graph TD
         D --> G
         E --> H[Notification]
         H --> I[CustomerEvent]
-        E --> M[NotificationJob]
+        E --> R[NotificationJob]
         
     end
 
@@ -81,8 +81,8 @@ graph TD
         H --> J
         H --> K[Kafka Event Publisher]
         H --> L[Email Sender Adapter]
-        C --> N[CustomerRepositoryAdapter]
-        D --> N
+        C --> S[CustomerRepositoryAdapter]
+        D --> S
     end
 
     subgraph Config Layer
