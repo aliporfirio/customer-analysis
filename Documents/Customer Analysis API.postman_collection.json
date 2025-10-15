@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "5530c631-028d-4f91-97f8-29d55d557272",
+		"name": "Customer Analysis API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48427799",
+		"_collection_link": "https://alice-porfirio-2373175.postman.co/workspace/Alice-Porfirio's-Workspace~bf76c315-794d-4d52-8e8b-05efd3382edd/collection/48427799-5530c631-028d-4f91-97f8-29d55d557272?action=share&source=collection_link&creator=48427799"
+	},
+	"item": [
+		{
+			"name": "Login Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auth/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzYwNTIxNDQ1LCJleHAiOjE3NjA1MjUwNDV9.WEqFXR2dnzl03tqBlbysrAQBfbC4pN_2BktLms29-ZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/alice/eclipse-workspace/customer-analysis/Documents/example_customers.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/customerservice/upload",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"customerservice",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzYwNTIxNDQ1LCJleHAiOjE3NjA1MjUwNDV9.WEqFXR2dnzl03tqBlbysrAQBfbC4pN_2BktLms29-ZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/alice/eclipse-workspace/customer-analysis/Documents/example_customers.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/customerservice/summary",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"customerservice",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
