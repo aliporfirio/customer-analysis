@@ -56,42 +56,53 @@ The project is implemented using Java 21 and Spring Boot 3.4.10, following a lay
 
 ```mermaid
 graph TD
+    %% User Interaction
     subgraph User Interaction
         A[Web UI / REST Client] -->|Upload CSV / Request Reports| B[REST Controllers]
     end
 
+    %% Application Layer
     subgraph Application Layer
         B --> C[CustomerServiceCsvService]
         B --> D[CustomerServiceReportService]
-        B --> E[NotificationDispatcher]
+        D --> E[NotificationDispatcher]
         E --> F[NotificationWorker]
     end
 
+    %% Domain Layer
     subgraph Domain Layer
         C --> G[CustomerService Entity / DTOs]
         D --> G
         E --> H[Notification Entity / DTOs]
-        G --> I[CustomerEvent / NotificationJob]
-    end
-
-    subgraph Infrastructure Layer
-        G --> J[JPA Repositories / PostgreSQL]
+        G --> I[CustomerEvent]
+        G --> J[NotificationJob]
         H --> J
-        H --> K[Kafka Event Publisher]
-        H --> L[Email Sender Adapter]
     end
 
+    %% Infrastructure Layer
+    subgraph Infrastructure Layer
+        I --> K[EventPublisher Adapter]
+        J --> L[NotificationRepositoryAdapter]
+        J --> M[CustomerServiceRepositoryAdapter]
+        J --> N[EmailSenderAdapter]
+        G --> P[JPA Repositories / PostgreSQL]
+        H --> P
+    end
+
+    %% Config Layer
     subgraph Config Layer
-        B --> M[SecurityConfig / JWT / Filters]
-        B --> N[KafkaProducerConfig]
-        B --> O[OpenAPI Config]
+        B --> Q[SecurityConfig / JWT / Filters]
+        B --> R[KafkaProducerConfig]
+        B --> S[OpenAPI Config]
     end
 
+    %% Styling
     style User Interaction fill:#f9f,stroke:#333,stroke-width:1px
     style Application Layer fill:#bbf,stroke:#333,stroke-width:1px
     style Domain Layer fill:#bfb,stroke:#333,stroke-width:1px
     style Infrastructure Layer fill:#ffb,stroke:#333,stroke-width:1px
     style Config Layer fill:#fbb,stroke:#333,stroke-width:1px
+
 
 ```
 
