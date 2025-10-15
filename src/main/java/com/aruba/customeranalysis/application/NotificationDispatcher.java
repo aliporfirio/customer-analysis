@@ -20,7 +20,12 @@ public class NotificationDispatcher {
     public void dispatch(NotificationJob job) {
     	
         log.info("Dispatching notification job: {} for customer {}", job.type(), job.customerId());
-        worker.process(job);
+        
+        try {
+            worker.process(job);
+        } catch (Exception e) {
+            log.error("Worker failed for job {}: {}", job, e.getMessage());
+        }
         
     }
 }

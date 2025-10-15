@@ -48,7 +48,7 @@ public class CustomerServiceReportService {
 		List<CustomerExpiredServiceDTO> expiredServices = customerServiceRepositoryInterface.findCustomersWithExpiredServices();
 		List<CustomerExpiringServiceDTO> expiringServices = customerServiceRepositoryInterface.findCustomersithExpiringServices(java.time.LocalDate.now().plusDays(15));
 
-		InputStream template = getClass().getResourceAsStream(Constants.REPORT_TEMPLATE_PATH);		
+		InputStream template = getTemplateStream();
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		
 		try (Workbook workbook = new XSSFWorkbook(template)) {
@@ -160,6 +160,10 @@ public class CustomerServiceReportService {
             );
             notificationDispatcher.dispatch(job);
         }
+    }
+    
+    protected InputStream getTemplateStream() {
+        return getClass().getResourceAsStream(Constants.REPORT_TEMPLATE_PATH);
     }
 
 }

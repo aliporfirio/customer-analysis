@@ -1024,3 +1024,906 @@ Caused by: org.postgresql.util.PSQLException: FATAL: password authentication fai
 2025-10-15 09:41:41 [task-7] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST011 and service HOSTING permanently failed after retries
 2025-10-15 09:41:41 [task-6] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST009 and service HOSTING permanently failed after retries
 2025-10-15 09:41:41 [task-5] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST006 and service PEC permanently failed after retries
+2025-10-15 10:50:05 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 10:50:05 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - Starting CustomerAnalysisApplicationTests using Java 21.0.8 with PID 15148 (started by alice in C:\Users\alice\eclipse-workspace\customer-analysis)
+2025-10-15 10:50:05 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 10:50:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 10:50:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 218 ms. Found 4 JPA repository interfaces.
+2025-10-15 10:50:10 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-10-15 10:50:10 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-10-15 10:50:10 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.20.6
+2025-10-15 10:50:11 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-10-15 10:50:11 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-10-15 10:50:11 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-10-15 10:50:12 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 7880 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-10-15 10:50:12 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-10-15 10:50:13 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-10-15 10:50:13 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 24bbb7490fb86e13e6b05b4309bf40d0d2c6878f9b3d22fbdb942ce7aa4b71df
+2025-10-15 10:50:14 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT2.1370812S
+2025-10-15 10:50:14 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-10-15 10:50:14 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-10-15 10:50:14 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-10-15 10:50:14 [main] INFO  tc.apache/kafka-native:latest - Pulling docker image: apache/kafka-native:latest. Please be patient; this may take some time but only needs to be done once.
+2025-10-15 10:50:16 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Starting to pull image
+2025-10-15 10:50:16 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-10-15 10:50:17 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  6 pending,  1 downloaded,  0 extracted, (0 bytes/? MB)
+2025-10-15 10:50:17 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  5 pending,  2 downloaded,  0 extracted, (0 bytes/? MB)
+2025-10-15 10:50:17 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  4 pending,  3 downloaded,  0 extracted, (0 bytes/? MB)
+2025-10-15 10:50:17 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  3 pending,  4 downloaded,  0 extracted, (0 bytes/? MB)
+2025-10-15 10:50:17 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  2 pending,  5 downloaded,  0 extracted, (0 bytes/? MB)
+2025-10-15 10:50:18 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  1 pending,  6 downloaded,  0 extracted, (10 MB/? MB)
+2025-10-15 10:50:19 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  1 pending,  6 downloaded,  1 extracted, (16 MB/? MB)
+2025-10-15 10:50:19 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  1 pending,  6 downloaded,  2 extracted, (18 MB/? MB)
+2025-10-15 10:50:20 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  0 pending,  7 downloaded,  2 extracted, (42 MB/43 MB)
+2025-10-15 10:50:22 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  0 pending,  7 downloaded,  3 extracted, (42 MB/43 MB)
+2025-10-15 10:50:22 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  0 pending,  7 downloaded,  4 extracted, (42 MB/43 MB)
+2025-10-15 10:50:22 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  0 pending,  7 downloaded,  5 extracted, (42 MB/43 MB)
+2025-10-15 10:50:22 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  0 pending,  7 downloaded,  6 extracted, (42 MB/43 MB)
+2025-10-15 10:50:22 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pulling image layers:  0 pending,  7 downloaded,  7 extracted, (42 MB/43 MB)
+2025-10-15 10:50:22 [main] INFO  tc.apache/kafka-native:latest - Image apache/kafka-native:latest pull took PT7.6396873S
+2025-10-15 10:50:22 [docker-java-stream--1047865586] INFO  tc.apache/kafka-native:latest - Pull complete. 7 layers, pulled in 6s (downloaded 42 MB at 7 MB/s)
+2025-10-15 10:50:22 [main] INFO  tc.apache/kafka-native:latest - Creating container for image: apache/kafka-native:latest
+2025-10-15 10:50:23 [main] INFO  tc.apache/kafka-native:latest - Container apache/kafka-native:latest is starting: 8ae29c3eb8fbafd5806b98aec09a7f5a8e12b1e1bc152d2302349e5b9941e5a5
+2025-10-15 10:50:24 [main] INFO  tc.apache/kafka-native:latest - Container apache/kafka-native:latest started in PT2.0404125S
+2025-10-15 10:50:24 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-10-15 10:50:24 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: c84771d8c635015410b0a8b442dbb597020f328840b2e76f2ef0c3c9783d0568
+2025-10-15 10:50:27 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT2.9974105S
+2025-10-15 10:50:27 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:60370/test?loggerLevel=OFF)
+2025-10-15 10:50:28 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:60370/test?loggerLevel=OFF (PostgreSQL 17.5)
+2025-10-15 10:50:29 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-10-15 10:50:29 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.076s)
+2025-10-15 10:50:29 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-10-15 10:50:29 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-10-15 10:50:29 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1 - init customer table"
+2025-10-15 10:50:29 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - init security tables"
+2025-10-15 10:50:29 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.089s)
+2025-10-15 10:50:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 10:50:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 10:50:29 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 10:50:30 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 10:50:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 10:50:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b084c4c
+2025-10-15 10:50:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 10:50:30 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15 10:50:30 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 10:50:32 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 10:50:32 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 10:50:33 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15 10:50:35 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 10:50:35 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-15 10:50:35 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-15 10:50:36 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-10-15 10:50:38 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:60369]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-customer-service-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = customer-service-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 10:50:38 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 10:50:38 [main] INFO  o.a.k.c.consumer.ConsumerConfig - These configurations '[spring.json.add.type.headers]' were supplied but are not used yet.
+2025-10-15 10:50:38 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 10:50:38 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 10:50:38 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760518238588
+2025-10-15 10:50:38 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 10:50:38 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - Started CustomerAnalysisApplicationTests in 33.884 seconds (process running for 40.319)
+2025-10-15 10:50:39 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: UPSELL_EMAIL for customer CUST001
+2025-10-15 10:50:39 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: EXPIRED_ALERT for customer CUST002
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Error while fetching metadata with correlation id 2 : {alerts.customer_expired=UNKNOWN_TOPIC_OR_PARTITION}
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Discovered group coordinator localhost:60369 (id: 2147483646 rack: null)
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] (Re-)joining group
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: need to re-join with the given member-id: consumer-customer-service-group-1-970f46b8-8a1f-401f-b16e-3f07fbbf05d8
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] (Re-)joining group
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-customer-service-group-1-970f46b8-8a1f-401f-b16e-3f07fbbf05d8', protocol='range'}
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Finished assignment for group at generation 1: {consumer-customer-service-group-1-970f46b8-8a1f-401f-b16e-3f07fbbf05d8=Assignment(partitions=[alerts.customer_expired-0])}
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-customer-service-group-1-970f46b8-8a1f-401f-b16e-3f07fbbf05d8', protocol='range'}
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Notifying assignor about the new Assignment(partitions=[alerts.customer_expired-0])
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Adding newly assigned partitions: alerts.customer_expired-0
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting offset for partition alerts.customer_expired-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:60369 (id: 1 rack: null)], epoch=0}}.
+2025-10-15 10:50:40 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: partitions assigned: [alerts.customer_expired-0]
+2025-10-15 10:50:40 [main] ERROR c.a.c.a.CustomerServiceCsvService - Invalid row: CSVRecord [comment='null', recordNumber=1, values=[CUST002, INVALID_TYPE, ACTIVE, 2024-01-01, 2025-12-31, 200.00]] - Missing or invalid service_type
+2025-10-15 10:50:40 [main] ERROR c.a.c.a.CustomerServiceCsvService - Invalid row: CSVRecord [comment='null', recordNumber=1, values=[CUST001, INTERNET, ACTIVE, 2024-01-01, 2024-12-31, 100.00]] - Missing or invalid service_type
+2025-10-15 10:50:40 [main] ERROR c.a.c.a.CustomerServiceCsvService - Invalid row: CSVRecord [comment='null', recordNumber=2, values=[CUST002, MAIL, INACTIVE, 2024-02-01, 2024-12-31, 50.00]] - Missing or invalid service_type
+2025-10-15 10:50:41 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST002, expiredCount=2, serviceType=null]
+2025-10-15 10:50:41 [main] ERROR c.a.c.application.NotificationWorker - Attemps 1 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 10:50:43 [main] ERROR c.a.c.application.NotificationWorker - Attemps 2 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 10:50:47 [main] ERROR c.a.c.application.NotificationWorker - Attemps 3 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 10:50:53 [main] ERROR c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST002 permanently failed after retries
+2025-10-15 10:50:53 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST001, expiredCount=5, serviceType=null]
+2025-10-15 10:50:53 [main] INFO  c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST001 successfully sent
+2025-10-15 10:50:53 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST004, expiredCount=null, serviceType=HOSTING]
+2025-10-15 10:50:53 [main] ERROR c.a.c.application.NotificationWorker - Attempt 1 failed in sending notification UPSELL_EMAIL: SMTP error
+2025-10-15 10:50:55 [main] ERROR c.a.c.application.NotificationWorker - Attempt 2 failed in sending notification UPSELL_EMAIL: SMTP error
+2025-10-15 10:50:59 [main] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST004 and service HOSTING permanently failed after retries
+2025-10-15 10:50:59 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=null, customerId=CUST999, expiredCount=null, serviceType=null]
+2025-10-15 10:50:59 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST003, expiredCount=null, serviceType=PEC]
+2025-10-15 10:50:59 [main] INFO  c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST003 and service PEC successfully sent
+2025-10-15 10:51:00 [main] INFO  c.a.c.i.rest.security.AuthController - Login for user: john
+2025-10-15 10:51:00 [main] INFO  c.a.c.i.rest.security.AuthController - Login for user: john
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Revoke previously assigned partitions alerts.customer_expired-0
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: partitions revoked: [alerts.customer_expired-0]
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Member consumer-customer-service-group-1-970f46b8-8a1f-401f-b16e-3f07fbbf05d8 sending LeaveGroup request to coordinator localhost:60369 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Unsubscribed all topics or patterns and assigned partitions
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-customer-service-group-1 unregistered
+2025-10-15 10:51:00 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: Consumer stopped
+2025-10-15 10:51:00 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 10:51:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-15 10:51:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-15 11:02:59 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 11:02:59 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - Starting CustomerAnalysisApplicationTests using Java 21.0.8 with PID 3780 (started by alice in C:\Users\alice\eclipse-workspace\customer-analysis)
+2025-10-15 11:02:59 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 11:03:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 11:03:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 130 ms. Found 4 JPA repository interfaces.
+2025-10-15 11:03:03 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-10-15 11:03:03 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-10-15 11:03:03 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.20.6
+2025-10-15 11:03:03 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-10-15 11:03:04 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-10-15 11:03:04 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-10-15 11:03:04 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 7880 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-10-15 11:03:04 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-10-15 11:03:05 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-10-15 11:03:05 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: 02a0d9dd750f3dad00945b2df8a7c5b480d606bb9d090e3ccc541f379b353604
+2025-10-15 11:03:06 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT1.2771853S
+2025-10-15 11:03:06 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-10-15 11:03:06 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-10-15 11:03:06 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-10-15 11:03:06 [main] INFO  tc.apache/kafka-native:latest - Creating container for image: apache/kafka-native:latest
+2025-10-15 11:03:06 [main] INFO  tc.apache/kafka-native:latest - Container apache/kafka-native:latest is starting: cb9ed0731f25c0196f00dea329880422e1a23a8caa23ab41e4533859c65a3594
+2025-10-15 11:03:08 [main] INFO  tc.apache/kafka-native:latest - Container apache/kafka-native:latest started in PT1.8570569S
+2025-10-15 11:03:08 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-10-15 11:03:08 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: 96aac7222b0e5d4e3104037831770a18256246341ab9cedb290331b4bff0f2de
+2025-10-15 11:03:11 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT3.1241865S
+2025-10-15 11:03:11 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:56121/test?loggerLevel=OFF)
+2025-10-15 11:03:12 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:56121/test?loggerLevel=OFF (PostgreSQL 17.5)
+2025-10-15 11:03:12 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-10-15 11:03:12 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.036s)
+2025-10-15 11:03:12 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-10-15 11:03:12 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-10-15 11:03:12 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1 - init customer table"
+2025-10-15 11:03:12 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - init security tables"
+2025-10-15 11:03:12 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.091s)
+2025-10-15 11:03:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 11:03:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 11:03:13 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 11:03:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 11:03:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 11:03:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@49c74506
+2025-10-15 11:03:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 11:03:13 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15 11:03:13 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 11:03:16 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 11:03:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 11:03:16 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15 11:03:19 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 11:03:19 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-15 11:03:19 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-15 11:03:20 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-10-15 11:03:22 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:56119]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-customer-service-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = customer-service-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 11:03:22 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 11:03:22 [main] INFO  o.a.k.c.consumer.ConsumerConfig - These configurations '[spring.json.add.type.headers]' were supplied but are not used yet.
+2025-10-15 11:03:22 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 11:03:22 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 11:03:22 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760519002570
+2025-10-15 11:03:22 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 11:03:22 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - Started CustomerAnalysisApplicationTests in 24.291 seconds (process running for 29.099)
+2025-10-15 11:03:23 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: UPSELL_EMAIL for customer CUST001
+2025-10-15 11:03:23 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: EXPIRED_ALERT for customer CUST002
+2025-10-15 11:03:23 [main] ERROR c.a.c.a.NotificationDispatcher - Worker failed for job NotificationJob[type=EXPIRED_ALERT, customerId=CUST002, expiredCount=5, serviceType=null]: Processing failed
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Error while fetching metadata with correlation id 2 : {alerts.customer_expired=UNKNOWN_TOPIC_OR_PARTITION}
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Discovered group coordinator localhost:56119 (id: 2147483646 rack: null)
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] (Re-)joining group
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: need to re-join with the given member-id: consumer-customer-service-group-1-3f9bd26a-ce87-4be7-a06f-b8121ccfbb29
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] (Re-)joining group
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-customer-service-group-1-3f9bd26a-ce87-4be7-a06f-b8121ccfbb29', protocol='range'}
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Finished assignment for group at generation 1: {consumer-customer-service-group-1-3f9bd26a-ce87-4be7-a06f-b8121ccfbb29=Assignment(partitions=[alerts.customer_expired-0])}
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-customer-service-group-1-3f9bd26a-ce87-4be7-a06f-b8121ccfbb29', protocol='range'}
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Notifying assignor about the new Assignment(partitions=[alerts.customer_expired-0])
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Adding newly assigned partitions: alerts.customer_expired-0
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting offset for partition alerts.customer_expired-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:56119 (id: 1 rack: null)], epoch=0}}.
+2025-10-15 11:03:24 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: partitions assigned: [alerts.customer_expired-0]
+2025-10-15 11:03:25 [main] ERROR c.a.c.a.CustomerServiceCsvService - Invalid row: CSVRecord [comment='null', recordNumber=1, values=[CUST002, INVALID_TYPE, ACTIVE, 2024-01-01, 2025-12-31, 200.00]] - Missing or invalid service_type
+2025-10-15 11:03:25 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST002, expiredCount=2, serviceType=null]
+2025-10-15 11:03:25 [main] ERROR c.a.c.application.NotificationWorker - Attemps 1 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:03:27 [main] ERROR c.a.c.application.NotificationWorker - Attemps 2 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:03:31 [main] ERROR c.a.c.application.NotificationWorker - Attemps 3 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:03:37 [main] ERROR c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST002 permanently failed after retries
+2025-10-15 11:03:37 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST001, expiredCount=5, serviceType=null]
+2025-10-15 11:03:37 [main] INFO  c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST001 successfully sent
+2025-10-15 11:03:37 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST004, expiredCount=null, serviceType=HOSTING]
+2025-10-15 11:03:37 [main] ERROR c.a.c.application.NotificationWorker - Attempt 1 failed in sending notification UPSELL_EMAIL: SMTP error
+2025-10-15 11:03:39 [main] ERROR c.a.c.application.NotificationWorker - Attempt 2 failed in sending notification UPSELL_EMAIL: SMTP error
+2025-10-15 11:03:43 [main] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST004 and service HOSTING permanently failed after retries
+2025-10-15 11:03:43 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=null, customerId=CUST999, expiredCount=null, serviceType=null]
+2025-10-15 11:03:43 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST003, expiredCount=null, serviceType=PEC]
+2025-10-15 11:03:43 [main] INFO  c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST003 and service PEC successfully sent
+2025-10-15 11:03:44 [main] INFO  c.a.c.i.rest.security.AuthController - Login for user: john
+2025-10-15 11:03:44 [main] INFO  c.a.c.i.rest.security.AuthController - Login for user: john
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Revoke previously assigned partitions alerts.customer_expired-0
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: partitions revoked: [alerts.customer_expired-0]
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Member consumer-customer-service-group-1-3f9bd26a-ce87-4be7-a06f-b8121ccfbb29 sending LeaveGroup request to coordinator localhost:56119 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Unsubscribed all topics or patterns and assigned partitions
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-customer-service-group-1 unregistered
+2025-10-15 11:03:44 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: Consumer stopped
+2025-10-15 11:03:44 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 11:03:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-15 11:03:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-15 11:05:02 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 11:05:02 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - Starting CustomerAnalysisApplicationTests using Java 21.0.8 with PID 13508 (started by alice in C:\Users\alice\eclipse-workspace\customer-analysis)
+2025-10-15 11:05:02 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 11:05:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 11:05:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 126 ms. Found 4 JPA repository interfaces.
+2025-10-15 11:05:06 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-10-15 11:05:06 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-10-15 11:05:06 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.20.6
+2025-10-15 11:05:06 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-10-15 11:05:07 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-10-15 11:05:07 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-10-15 11:05:07 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 7880 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-10-15 11:05:07 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-10-15 11:05:08 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-10-15 11:05:08 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: aa3b1d7e4eecf6b36fac50f4278010745005b45a3ce282dd37e800c3c7911ee5
+2025-10-15 11:05:09 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT1.2667777S
+2025-10-15 11:05:09 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-10-15 11:05:09 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-10-15 11:05:09 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-10-15 11:05:09 [main] INFO  tc.apache/kafka-native:latest - Creating container for image: apache/kafka-native:latest
+2025-10-15 11:05:09 [main] INFO  tc.apache/kafka-native:latest - Container apache/kafka-native:latest is starting: ce78f7eebed501281088ae0922b649f0a242014bb19040b443fb6972b4d021e2
+2025-10-15 11:05:11 [main] INFO  tc.apache/kafka-native:latest - Container apache/kafka-native:latest started in PT2.0035029S
+2025-10-15 11:05:11 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-10-15 11:05:11 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: 52c2c1f30cffc976bafe23c08af57be37efc27b46ea79396cc25c504e353dcdc
+2025-10-15 11:05:13 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT2.806393S
+2025-10-15 11:05:13 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:56156/test?loggerLevel=OFF)
+2025-10-15 11:05:15 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:56156/test?loggerLevel=OFF (PostgreSQL 17.5)
+2025-10-15 11:05:15 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-10-15 11:05:15 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.033s)
+2025-10-15 11:05:15 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-10-15 11:05:15 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-10-15 11:05:15 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1 - init customer table"
+2025-10-15 11:05:15 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - init security tables"
+2025-10-15 11:05:15 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.077s)
+2025-10-15 11:05:15 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 11:05:15 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 11:05:15 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 11:05:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 11:05:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 11:05:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50c20b15
+2025-10-15 11:05:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 11:05:16 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15 11:05:16 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 11:05:18 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 11:05:18 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 11:05:19 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15 11:05:22 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 11:05:22 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-15 11:05:22 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-15 11:05:23 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-10-15 11:05:24 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:56155]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-customer-service-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = customer-service-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 11:05:24 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 11:05:25 [main] INFO  o.a.k.c.consumer.ConsumerConfig - These configurations '[spring.json.add.type.headers]' were supplied but are not used yet.
+2025-10-15 11:05:25 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 11:05:25 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 11:05:25 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760519125306
+2025-10-15 11:05:25 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 11:05:25 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - Started CustomerAnalysisApplicationTests in 24.084 seconds (process running for 29.168)
+2025-10-15 11:05:25 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: UPSELL_EMAIL for customer CUST001
+2025-10-15 11:05:25 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: EXPIRED_ALERT for customer CUST002
+2025-10-15 11:05:25 [main] ERROR c.a.c.a.NotificationDispatcher - Worker failed for job NotificationJob[type=EXPIRED_ALERT, customerId=CUST002, expiredCount=5, serviceType=null]: Processing failed
+2025-10-15 11:05:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Error while fetching metadata with correlation id 2 : {alerts.customer_expired=UNKNOWN_TOPIC_OR_PARTITION}
+2025-10-15 11:05:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Discovered group coordinator localhost:56155 (id: 2147483646 rack: null)
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] (Re-)joining group
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: need to re-join with the given member-id: consumer-customer-service-group-1-5f1ada43-339a-4fc7-8013-79347e633bef
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] (Re-)joining group
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-customer-service-group-1-5f1ada43-339a-4fc7-8013-79347e633bef', protocol='range'}
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Finished assignment for group at generation 1: {consumer-customer-service-group-1-5f1ada43-339a-4fc7-8013-79347e633bef=Assignment(partitions=[alerts.customer_expired-0])}
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-customer-service-group-1-5f1ada43-339a-4fc7-8013-79347e633bef', protocol='range'}
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Notifying assignor about the new Assignment(partitions=[alerts.customer_expired-0])
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Adding newly assigned partitions: alerts.customer_expired-0
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting offset for partition alerts.customer_expired-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:56155 (id: 1 rack: null)], epoch=0}}.
+2025-10-15 11:05:27 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: partitions assigned: [alerts.customer_expired-0]
+2025-10-15 11:05:27 [main] ERROR c.a.c.a.CustomerServiceCsvService - Invalid row: CSVRecord [comment='null', recordNumber=1, values=[CUST002, INVALID_TYPE, ACTIVE, 2024-01-01, 2025-12-31, 200.00]] - Missing or invalid service_type
+2025-10-15 11:05:28 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST002, expiredCount=2, serviceType=null]
+2025-10-15 11:05:28 [main] ERROR c.a.c.application.NotificationWorker - Attemps 1 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:05:30 [main] ERROR c.a.c.application.NotificationWorker - Attemps 2 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:05:34 [main] ERROR c.a.c.application.NotificationWorker - Attemps 3 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:05:40 [main] ERROR c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST002 permanently failed after retries
+2025-10-15 11:05:40 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST001, expiredCount=5, serviceType=null]
+2025-10-15 11:05:40 [main] INFO  c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST001 successfully sent
+2025-10-15 11:05:40 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST004, expiredCount=null, serviceType=HOSTING]
+2025-10-15 11:05:40 [main] ERROR c.a.c.application.NotificationWorker - Attempt 1 failed in sending notification UPSELL_EMAIL: SMTP error
+2025-10-15 11:05:42 [main] ERROR c.a.c.application.NotificationWorker - Attempt 2 failed in sending notification UPSELL_EMAIL: SMTP error
+2025-10-15 11:05:46 [main] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST004 and service HOSTING permanently failed after retries
+2025-10-15 11:05:46 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=null, customerId=CUST999, expiredCount=null, serviceType=null]
+2025-10-15 11:05:46 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST003, expiredCount=null, serviceType=PEC]
+2025-10-15 11:05:46 [main] INFO  c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST003 and service PEC successfully sent
+2025-10-15 11:05:46 [main] INFO  c.a.c.i.rest.security.AuthController - Login for user: john
+2025-10-15 11:05:46 [main] INFO  c.a.c.i.rest.security.AuthController - Login for user: john
+2025-10-15 11:05:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Revoke previously assigned partitions alerts.customer_expired-0
+2025-10-15 11:05:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: partitions revoked: [alerts.customer_expired-0]
+2025-10-15 11:05:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Member consumer-customer-service-group-1-5f1ada43-339a-4fc7-8013-79347e633bef sending LeaveGroup request to coordinator localhost:56155 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-10-15 11:05:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 11:05:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 11:05:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Unsubscribed all topics or patterns and assigned partitions
+2025-10-15 11:05:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 11:05:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 11:05:47 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 11:05:47 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 11:05:47 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 11:05:47 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 11:05:47 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-customer-service-group-1 unregistered
+2025-10-15 11:05:47 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: Consumer stopped
+2025-10-15 11:05:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 11:05:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-15 11:05:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-15 11:08:02 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 11:08:02 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - Starting CustomerAnalysisApplicationTests using Java 21.0.8 with PID 16704 (started by alice in C:\Users\alice\eclipse-workspace\customer-analysis)
+2025-10-15 11:08:02 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 11:08:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 11:08:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
+2025-10-15 11:08:06 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-10-15 11:08:06 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-10-15 11:08:06 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.20.6
+2025-10-15 11:08:06 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-10-15 11:08:07 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-10-15 11:08:07 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-10-15 11:08:07 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 7880 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2025-10-15 11:08:07 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Creating container for image: testcontainers/ryuk:0.11.0
+2025-10-15 11:08:07 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-10-15 11:08:08 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 is starting: f78579f33951ea771fba02346abf3b8f17342d6f76d471920276f139d0c10d5c
+2025-10-15 11:08:08 [main] INFO  tc.testcontainers/ryuk:0.11.0 - Container testcontainers/ryuk:0.11.0 started in PT1.2362056S
+2025-10-15 11:08:08 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-10-15 11:08:08 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-10-15 11:08:08 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-10-15 11:08:08 [main] INFO  tc.apache/kafka-native:latest - Creating container for image: apache/kafka-native:latest
+2025-10-15 11:08:08 [main] INFO  tc.apache/kafka-native:latest - Container apache/kafka-native:latest is starting: d53cc7d8e096dd6b35dc1ac8e0f73be0bf39d5b8386dbee023d83ccf7fa150e4
+2025-10-15 11:08:10 [main] INFO  tc.apache/kafka-native:latest - Container apache/kafka-native:latest started in PT1.9581095S
+2025-10-15 11:08:10 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-10-15 11:08:10 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: 7815e4afb44d12770619e3a3e804391b00440de1006ac5a20f8c754bac627e33
+2025-10-15 11:08:13 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT2.8332332S
+2025-10-15 11:08:13 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:56189/test?loggerLevel=OFF)
+2025-10-15 11:08:14 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:56189/test?loggerLevel=OFF (PostgreSQL 17.5)
+2025-10-15 11:08:14 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-10-15 11:08:14 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.034s)
+2025-10-15 11:08:14 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-10-15 11:08:14 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-10-15 11:08:14 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1 - init customer table"
+2025-10-15 11:08:15 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - init security tables"
+2025-10-15 11:08:15 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.077s)
+2025-10-15 11:08:15 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 11:08:15 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 11:08:15 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 11:08:15 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 11:08:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 11:08:15 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26fee641
+2025-10-15 11:08:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 11:08:16 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-15 11:08:16 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 11:08:18 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 11:08:18 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 11:08:18 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-15 11:08:21 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 11:08:21 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-10-15 11:08:21 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-15 11:08:22 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-10-15 11:08:24 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:56188]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-customer-service-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = customer-service-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-15 11:08:24 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-10-15 11:08:24 [main] INFO  o.a.k.c.consumer.ConsumerConfig - These configurations '[spring.json.add.type.headers]' were supplied but are not used yet.
+2025-10-15 11:08:24 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-10-15 11:08:24 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-10-15 11:08:24 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1760519304653
+2025-10-15 11:08:24 [main] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Subscribed to topic(s): alerts.customer_expired
+2025-10-15 11:08:24 [main] INFO  c.a.c.CustomerAnalysisApplicationTests - Started CustomerAnalysisApplicationTests in 23.392 seconds (process running for 28.675)
+2025-10-15 11:08:25 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: UPSELL_EMAIL for customer CUST001
+2025-10-15 11:08:25 [main] INFO  c.a.c.a.NotificationDispatcher - Dispatching notification job: EXPIRED_ALERT for customer CUST002
+2025-10-15 11:08:25 [main] ERROR c.a.c.a.NotificationDispatcher - Worker failed for job NotificationJob[type=EXPIRED_ALERT, customerId=CUST002, expiredCount=5, serviceType=null]: Processing failed
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Error while fetching metadata with correlation id 2 : {alerts.customer_expired=UNKNOWN_TOPIC_OR_PARTITION}
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Discovered group coordinator localhost:56188 (id: 2147483646 rack: null)
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] (Re-)joining group
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: need to re-join with the given member-id: consumer-customer-service-group-1-aee9fca7-a2eb-4360-b8c5-6297320baca4
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] (Re-)joining group
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-customer-service-group-1-aee9fca7-a2eb-4360-b8c5-6297320baca4', protocol='range'}
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Finished assignment for group at generation 1: {consumer-customer-service-group-1-aee9fca7-a2eb-4360-b8c5-6297320baca4=Assignment(partitions=[alerts.customer_expired-0])}
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-customer-service-group-1-aee9fca7-a2eb-4360-b8c5-6297320baca4', protocol='range'}
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Notifying assignor about the new Assignment(partitions=[alerts.customer_expired-0])
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Adding newly assigned partitions: alerts.customer_expired-0
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Found no committed offset for partition alerts.customer_expired-0
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting offset for partition alerts.customer_expired-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:56188 (id: 1 rack: null)], epoch=0}}.
+2025-10-15 11:08:26 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: partitions assigned: [alerts.customer_expired-0]
+2025-10-15 11:08:27 [main] ERROR c.a.c.a.CustomerServiceCsvService - Invalid row: CSVRecord [comment='null', recordNumber=1, values=[CUST002, INVALID_TYPE, ACTIVE, 2024-01-01, 2025-12-31, 200.00]] - Missing or invalid service_type
+2025-10-15 11:08:27 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST002, expiredCount=2, serviceType=null]
+2025-10-15 11:08:27 [main] ERROR c.a.c.application.NotificationWorker - Attemps 1 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:08:29 [main] ERROR c.a.c.application.NotificationWorker - Attemps 2 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:08:33 [main] ERROR c.a.c.application.NotificationWorker - Attemps 3 failed in sending notification EXPIRED_ALERT: Send failed
+2025-10-15 11:08:39 [main] ERROR c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST002 permanently failed after retries
+2025-10-15 11:08:39 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=EXPIRED_ALERT, customerId=CUST001, expiredCount=5, serviceType=null]
+2025-10-15 11:08:39 [main] INFO  c.a.c.application.NotificationWorker - Notification EXPIRED_ALERT related to customer CUST001 successfully sent
+2025-10-15 11:08:39 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST004, expiredCount=null, serviceType=HOSTING]
+2025-10-15 11:08:39 [main] ERROR c.a.c.application.NotificationWorker - Attempt 1 failed in sending notification UPSELL_EMAIL: SMTP error
+2025-10-15 11:08:41 [main] ERROR c.a.c.application.NotificationWorker - Attempt 2 failed in sending notification UPSELL_EMAIL: SMTP error
+2025-10-15 11:08:45 [main] ERROR c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST004 and service HOSTING permanently failed after retries
+2025-10-15 11:08:45 [main] INFO  c.a.c.application.NotificationWorker - Worker started for notification NotificationJob[type=UPSELL_EMAIL, customerId=CUST003, expiredCount=null, serviceType=PEC]
+2025-10-15 11:08:45 [main] INFO  c.a.c.application.NotificationWorker - Notification UPSELL_EMAIL related to customer CUST003 and service PEC successfully sent
+2025-10-15 11:08:46 [main] INFO  c.a.c.i.rest.security.AuthController - Login for user: john
+2025-10-15 11:08:46 [main] INFO  c.a.c.i.rest.security.AuthController - Login for user: john
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Revoke previously assigned partitions alerts.customer_expired-0
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: partitions revoked: [alerts.customer_expired-0]
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Member consumer-customer-service-group-1-aee9fca7-a2eb-4360-b8c5-6297320baca4 sending LeaveGroup request to coordinator localhost:56188 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Unsubscribed all topics or patterns and assigned partitions
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-customer-service-group-1, groupId=customer-service-group] Request joining group due to: consumer pro-actively leaving the group
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-customer-service-group-1 unregistered
+2025-10-15 11:08:46 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - customer-service-group: Consumer stopped
+2025-10-15 11:08:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 11:08:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-15 11:08:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
