@@ -7,6 +7,7 @@ The application exposes REST APIs secured with JWT authentication and provides a
 
 ## Table of Contents
 
+- Functional Overview
 - Getting Started
 - Running the Application
 - Swagger UI & Authentication
@@ -15,6 +16,87 @@ The application exposes REST APIs secured with JWT authentication and provides a
     - Customer Management
 - Preconfigured Data
 - Notes
+
+---
+
+## Functional Overview
+
+The main functionalities of the system include:
+
+- CSV Data Import and Validation
+
+  - Each CSV row represents a customer service with fields: customer_id, service_type, activation_date, expiration_date, amount, and status.
+  - The system validates each field, logs non-compliant rows, and continues processing the remaining data.
+
+- Reporting and Analytics
+
+  - Aggregated reports are exposed via RESTful JSON APIs (e.g., /report/summary).
+  - Reports include:
+
+   - Total active services per service type.
+   - Average spending per customer.
+   - Customers with multiple expired services.
+   - Customers with services expiring within the next 15 days.
+
+- Asynchronous Notifications
+
+  - Special conditions trigger notifications handled asynchronously:
+
+   - Customers with more than 5 expired services generate Kafka events (alerts.customer_expired) for external consumption.
+   - Active services older than 3 years trigger marketing emails for upselling opportunities.
+
+  - Notification handling uses retry policies and proper error logging to ensure reliability.
+
+---
+
+##Architectural Overview
+
+The project is implemented using Java 21 and Spring Boot 3.4.10, following a layered and modular architecture:
+
+####Application Layer
+
+Handles business logic, service orchestration, and notification dispatching (CustomerServiceCsvService, CustomerServiceReportService, NotificationDispatcher).
+
+####Domain Layer
+
+Contains core models, DTOs, repositories interfaces, events, and job definitions (CustomerService, Notification, CustomerEvent, NotificationJob).
+
+####Infrastructure Layer
+
+Implements integration with external systems:
+
+- Persistence: JPA-based repositories for PostgreSQL.
+
+- Messaging: 
+
+  - Kafka event publishing and asynchronous notification handling.
+  - Email: SMTP mail sending via Spring Boot Mail.
+
+- REST API: Controllers expose endpoints, with exception handling and JWT-based security.
+
+####Configuration Layer
+
+Configurations for Kafka, OpenAPI documentation, and Spring Security (JWT authentication, filters, roles, and user management).
+
+####Testing
+
+Unit and integration tests leverage JUnit, Spring Boot Test, Testcontainers (PostgreSQL, Kafka), and Spring Security test support.
+
+###Technology Stack
+
+- Backend: Java 21, Spring Boot 3.4.0, Spring Data JPA
+- Messaging: Apache Kafka 7.5.0
+- Database: PostgreSQL 18.0 with Flyway migrations
+- Security: Spring Security with JWT authentication
+- Email: Spring Boot Mail
+- File Processing: Apache POI for CSV parsing
+- Documentation: OpenAPI / Swagger
+- Testing: JUnit, Testcontainers, Spring Boot Test
+- Test API: Postman 
+
+###Deployment
+
+The application is containerized and can be deployed with Docker Compose, including services for PostgreSQL, Kafka (with Zookeeper), Mailhog (for email testing), and the customer-analysis service itself.
 
 ---
 
@@ -146,10 +228,9 @@ Authorization:
 - Response Example:  
 
   - 200 OK: Report generated successfully
-
-     - Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-     - Content-Disposition: attachment; filename=customer_report_<timestamp>.xlsx
-     - Body: Excel file in .xlsx format
+  - Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  - Content-Disposition: attachment; filename=customer_report_<timestamp>.xlsx
+  - Body: Excel file in .xlsx format
 
 #### Notes: 
 in "Documents" folder an exported Postman collection is present to provide test option outside swagger
