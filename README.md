@@ -70,7 +70,7 @@ graph TD
     subgraph Domain Layer
         C --> G[CustomerService / DTOs]
         D --> G
-        E --> H[Notification]
+        F --> H[Notification]
         H --> I[CustomerEvent]
         E --> R[NotificationJob]
         
