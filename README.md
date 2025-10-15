@@ -236,8 +236,11 @@ in "Documents" folder an exported Postman collection is present to provide test 
 
 ### Customer Service
 
-- Database contains 10 sample customers service.
-- In "Documents" folder a example_customers.csv is present and can be used to test upload endpoint.
+- In "Documents" folder a example_customers.csv is present and can be used to test upload endpoint and populate the table.
+ It contains three faulty rows:
+   - Row 9 (8, excluding header) that has an invalid service type
+   - Row 30 (29, excluding header) that has an expiration_date expressed in an invalid format
+   - Row 36 (35, excluding header) that has status ACTIVE, but an expiration date in the past
 
 ### Users
 

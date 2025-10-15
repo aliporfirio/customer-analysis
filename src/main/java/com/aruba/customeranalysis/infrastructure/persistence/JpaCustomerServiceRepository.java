@@ -28,6 +28,7 @@ public interface JpaCustomerServiceRepository extends JpaRepository<CustomerServ
 	        FROM CustomerServiceEntity c
 	        WHERE c.status = com.aruba.customeranalysis.domain.model.ServiceStatus.ACTIVE
 	        GROUP BY c.serviceType
+	        ORDER BY c.serviceType ASC
 	        """)
     List<ServiceSummaryDTO> findActiveServicesByType();
 
@@ -37,6 +38,7 @@ public interface JpaCustomerServiceRepository extends JpaRepository<CustomerServ
         )
         FROM CustomerServiceEntity c
         GROUP BY c.customerId
+	    ORDER BY c.customerId ASC
         """)
     List<CustomerAverageCostDTO> findAverageCostPerCustomer();
 
@@ -48,6 +50,7 @@ public interface JpaCustomerServiceRepository extends JpaRepository<CustomerServ
         WHERE c.status = com.aruba.customeranalysis.domain.model.ServiceStatus.EXPIRED
         GROUP BY c.customerId
         HAVING COUNT(c) > 1
+	    ORDER BY c.customerId ASC
         """)
     List<CustomerExpiredServiceDTO> findCustomersWithMultipleExpired();
 
@@ -58,6 +61,7 @@ public interface JpaCustomerServiceRepository extends JpaRepository<CustomerServ
         FROM CustomerServiceEntity c
         WHERE c.expirationDate <= :limitDate
           AND c.status = com.aruba.customeranalysis.domain.model.ServiceStatus.ACTIVE
+	    ORDER BY c.customerId ASC, c.serviceType ASC
         """)
     List<CustomerExpiringServiceDTO> findCustomersExpiringSoon(@Param("limitDate") LocalDate limitDate);
     

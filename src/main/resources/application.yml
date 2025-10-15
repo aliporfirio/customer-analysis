@@ -1,9 +1,9 @@
 spring:
   application.name: customeranalysis
   datasource:
-    url: jdbc:postgresql://localhost:5432/customeranalysisdb
+    url: jdbc:postgresql://postgres:5432/customeranalysisdb
     username: postgres
-    password: alixpostgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -11,14 +11,14 @@ spring:
     properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     properties:
       spring.json.add.type.headers: false
     consumer:
-      group-id: customer-service-group
+      group-id: test-customer-service-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
@@ -26,7 +26,7 @@ spring:
     expired-topic: alerts.customer_expired
 
   mail:
-    host: localhost
+    host: mailhog
     port: 1025
     #username: noreply@aruba.it
     #password: yourpassword
@@ -53,7 +53,7 @@ notification:
   expiredmail:
     max-retries: 5
   upsellmail:
-    to: alice.porfirio@gmail.com #fakemail.marketing@aruba.it
+    to: fakemail.marketing@foo.it
     subject: "Upselling opportunity for customer %s"
     body: "To Marketing Team,\n Customer %s has service %s active for more than 3 years.\n
 		       It has to be considered the possibility of an upselling. \n
