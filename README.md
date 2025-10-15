@@ -256,3 +256,9 @@ in "Documents" folder an exported Postman collection is present to provide test 
 
 ---
 
+### Notes:
+ - Project includes a TestEventListener, a consumer that read from the same Kafka topic publisher writes on.
+   Its logs can be found whenever an expired event is sent and have the following format:
+   "[Kafka] Received CustomerEvent: type={}, customerId={}, expiredCount={}"
+   
+
