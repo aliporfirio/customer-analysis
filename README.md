@@ -120,12 +120,12 @@ Authorization:
 - Request: Multipart file to upload
 - Headers required: 
 
-\t - Content-Type: multipart/form-data
-\t - Authorization: Bearer <token>
+     - Content-Type: multipart/form-data
+     - Authorization: Bearer <token>
 
 - Response Example:  
-\t - 200 OK: File processed successfully
-\t - 400 Bad Request: File missing or empty
+     - 200 OK: File processed successfully
+     - 400 Bad Request: File missing or empty
 
 
 2. **Generate Customer Service Report**
@@ -133,25 +133,23 @@ Authorization:
 - Roles: ADMIN
 - Description: Generates an aggregated Excel report containing the following statistics on customer services:
 
-\t 1.Total active services grouped by service_type
-\t 2.Average spending per customer (customer_id)
-\t 3.List of customers with more than one expired service (status = EXPIRED)
-\t 4.List of customers with services expiring within the next 15 days
+    1.Total active services grouped by service_type
+    2.Average spending per customer (customer_id)
+    3.List of customers with more than one expired service (status = EXPIRED)
+    4.List of customers with services expiring within the next 15 days
 
 - Headers required:
 
-\t - Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-\t - Authorization: Bearer <token>
+  - Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  - Authorization: Bearer <token>
 
 - Response Example:  
 
-\t - 200 OK: Report generated successfully
+  - 200 OK: Report generated successfully
 
-\t\t - Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-\t\t - Content-Disposition: attachment; filename=customer_report_<timestamp>.xlsx
-
-\t\t - Body: Excel file in .xlsx format
+     - Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+     - Content-Disposition: attachment; filename=customer_report_<timestamp>.xlsx
+     - Body: Excel file in .xlsx format
 
 #### Notes: 
 in "Documents" folder an exported Postman collection is present to provide test option outside swagger
