@@ -17,32 +17,34 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.aruba.customeranalysis.application.CustomerServiceApplicationService;
+import com.aruba.customeranalysis.application.CustomerServiceCsvService;
+import com.aruba.customeranalysis.application.CustomerServiceReportService;
 import com.aruba.customeranalysis.domain.Constants;
 
 @RestController
 @RequestMapping("/api/customerservice")
 public class CustomerSeviceController {
 	
-	private final CustomerServiceApplicationService customerServiceApplicationService;
+	private final CustomerServiceCsvService customerServiceCsvService;
+	private final CustomerServiceReportService customerServiceReportService;
 	
 	private static final Logger log = LoggerFactory.getLogger(CustomerSeviceController.class);
 	
-	public CustomerSeviceController(CustomerServiceApplicationService customerServiceApplicationService) {
-        this.customerServiceApplicationService = customerServiceApplicationService;
+	public CustomerSeviceController(CustomerServiceCsvService customerServiceCsvService,
+			CustomerServiceReportService customerServiceReportService) {
+		
+        this.customerServiceCsvService = customerServiceCsvService;
+        this.customerServiceReportService = customerServiceReportService;
     }
 	
 	@PreAuthorize("hasAnyRole('ADMIN','OPERATOR')")
 	@PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<String> uploadCsv(@RequestParam("file") MultipartFile file) throws IOException {
+    public ResponseEntity<String> uploadCsv(@RequestParam(name = "file", required = true) MultipartFile file) 
+    		throws IOException {
 		
 		log.info("Upload CSV: " + file.getOriginalFilename());
 		
-        if (file.isEmpty()) {
-            return ResponseEntity.badRequest().body("Missing or empty CSV file");
-        }
-
-        customerServiceApplicationService.processCsv(file);
+        customerServiceCsvService.processCsv(file);
         return ResponseEntity.ok("CSV successfully uploaded and elaborated.");
         
     }
@@ -53,7 +55,7 @@ public class CustomerSeviceController {
     	
     	log.info("Generate summary report");
     	
-        byte[] file = customerServiceApplicationService.generateExcelReport();
+        byte[] file = customerServiceReportService.generateExcelReport();
         
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern(Constants.DATETIME_FORMAT);        
         String filename = String.format(Constants.REPORT_FILENAME, dtf.format(OffsetDateTime.now()));
